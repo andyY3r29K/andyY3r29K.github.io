@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+
+    
+
+    <!-- 渲染优化 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" >
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--icon-->
+
+    
+    
+    
+    
+    
+
+
+    <!-- meta -->
+
+
+<title>八股文(一)JAVA基础 | Andy&#39;s blog</title>
+
+
+
+
+
+    <!-- OpenGraph -->
+ 
+    <meta name="description" content="1.接口和抽象类相似：  接口和抽象类都不能被实例化 实现接口或继承抽象类的普通子类都必须实现这些抽象方法  不同：  抽象类可以包含普通方法和代码块，接口里只能包含抽象方法、静态方法和默认方法 抽象类有构造方法，接口没有 抽象类中成员变量可以是各种类型的，接口的成员变量只能是public static final类型且必须赋值  接口：动作（飞、跑、游泳、可打包等） 抽象类：概念（动物、植物等）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="八股文(一)JAVA基础">
+<meta property="og:url" content="https://andyy3r29k.github.io/2023/01/10/%E5%85%AB%E8%82%A1%E6%96%87-%E4%B8%80-JAVA%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="Andy&#39;s blog">
+<meta property="og:description" content="1.接口和抽象类相似：  接口和抽象类都不能被实例化 实现接口或继承抽象类的普通子类都必须实现这些抽象方法  不同：  抽象类可以包含普通方法和代码块，接口里只能包含抽象方法、静态方法和默认方法 抽象类有构造方法，接口没有 抽象类中成员变量可以是各种类型的，接口的成员变量只能是public static final类型且必须赋值  接口：动作（飞、跑、游泳、可打包等） 抽象类：概念（动物、植物等）">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-01-10T07:48:51.000Z">
+<meta property="article:modified_time" content="2023-01-10T08:07:07.987Z">
+<meta property="article:author" content="Andy Wang">
+<meta name="twitter:card" content="summary_large_image">
+
+
+    
+<link rel="stylesheet" href="/css/style/main.css">
+ 
+
+    
+    
+        <link rel="stylesheet" id="hl-default-theme" href="/css/highlight/default.css" media="none" onload="this.media='all'">
+        
+    
+
+    
+    
+
+    
+
+     
+
+    <!-- custom head -->
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+    <body>
+        <div id="app" tabindex="-1">
+            <header class="header">
+    <div class="header__left">
+        <a href="/" class="button">
+            <span class="logo__text">Andy&#39;s blog</span>
+        </a>
+    </div>
+    <div class="header__right">
+        
+            <div class="navbar__menus">
+                
+                    <a href="/" class="navbar-menu button">首页</a>
+                
+                    <a href="/tags/" class="navbar-menu button">标签</a>
+                
+                    <a href="/archives/" class="navbar-menu button">归档</a>
+                
+                    <a href="/page/" class="navbar-menu button">Page</a>
+                
+            </div>
+        
+        
+        
+
+        
+        
+
+        
+            <a class="dropdown-icon button" id="btn-dropdown" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"><path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path></svg></a>
+            <div class="dropdown-menus" id="dropdown-menus">
+                
+                    <a href="/" class="dropdown-menu button">首页</a>
+                
+                    <a href="/tags/" class="dropdown-menu button">标签</a>
+                
+                    <a href="/archives/" class="dropdown-menu button">归档</a>
+                
+                    <a href="/page/" class="dropdown-menu button">Page</a>
+                
+            </div>
+        
+    </div>
+</header>
+
+
+            <main class="main">
+    
+
+<div class="post-title">
+    <h1 class="post-title__text">
+        八股文(一)JAVA基础
+    </h1>
+    <div class="post-title__meta">
+        <a href="/archives/2023/01/" class="post-meta__date button">2023-01-10</a>
+        
+ 
+        
+    
+    
+
+
+ 
+
+ 
+    </div>
+</div>
+
+
+
+<article class="post content-card">
+    <div class="post__header"></div>
+    <div class="post__content">
+        <h2 id="1-接口和抽象类"><a href="#1-接口和抽象类" class="headerlink" title="1.接口和抽象类"></a>1.接口和抽象类</h2><p>相似：</p>
+<ol>
+<li>接口和抽象类都不能被实例化</li>
+<li>实现接口或继承抽象类的普通子类都必须实现这些抽象方法</li>
+</ol>
+<p>不同：</p>
+<ol>
+<li>抽象类可以包含普通方法和代码块，接口里只能包含抽象方法、静态方法和默认方法</li>
+<li>抽象类有构造方法，接口没有</li>
+<li>抽象类中成员变量可以是各种类型的，接口的成员变量只能是public static final类型且必须赋值</li>
+</ol>
+<p>接口：动作（飞、跑、游泳、可打包等）</p>
+<p>抽象类：概念（动物、植物等）</p>
+<h2 id="2-重载和重写"><a href="#2-重载和重写" class="headerlink" title="2.重载和重写"></a>2.重载和重写</h2><p>重载：在同一个类中，方法名是相同的，其参数列表、返回类型和权限修饰符不同</p>
+<p>重写：在子类中，其和父类方法名、参数列表、返回类型相同，权限修饰符要大于父类方法，声明异常范围小于父类方法（final和private修饰的方法不能重写）</p>
+<h2 id="3-x3D-x3D-和equals"><a href="#3-x3D-x3D-和equals" class="headerlink" title="3.&#x3D;&#x3D;和equals"></a>3.&#x3D;&#x3D;和equals</h2><p>&#x3D;&#x3D;：基本类型比较值，引用类型比较内存地址</p>
+<p>equals：是Object类的方法，本质与&#x3D;&#x3D;一样，但其可以被重写，如String中重写equals方法比较的就是字符值，重写equals方法必须重写hashcode方法</p>
+<h2 id="4-异常处理机制"><a href="#4-异常处理机制" class="headerlink" title="4.异常处理机制"></a>4.异常处理机制</h2><ol>
+<li>使用try、catch、finally捕获异常，finally代码块一定会执行，捕获异常后程序将继续执行</li>
+<li>使用throws声明该方法可能会抛出的异常类型，出现异常后，程序终止</li>
+</ol>
+<h2 id="5-HashMap"><a href="#5-HashMap" class="headerlink" title="5.HashMap"></a>5.HashMap</h2><p>HashMap类主要用来处理具有键值对特征的数据</p>
+<ul>
+<li>允许使用null值和null键</li>
+<li>非线程安全</li>
+</ul>
+<p>loadFactor：负载因子（默认值为0.75）</p>
+<p>threshold：表示所能容纳的键值对的临界值（数组长度 * 负载因子）</p>
+<p>size：HashMap中实际存在的键值对数量</p>
+<p>modeCount：用来记录HashMap内部结构发生变化的次数</p>
+<p>INITIAL_CAOACITY：容量（默认16）</p>
+<p>数组+链表+红黑树</p>
+<ul>
+<li>数组部分（哈希桶）</li>
+<li>当链表长度大于等于8时，链表将以红黑树的形式存储</li>
+<li>长度降到6时，转成链表</li>
+<li>当HashMap中元素个数超过容量乘以负载因子的个数时，就创建一个大小为前一次两倍的新数组，再将原来数组中的数据复制到新数组中。</li>
+<li>当数组长度到达64且链表长度大于8时，链表转为红黑树</li>
+</ul>
+<p>HashMap存取原理：</p>
+<ol>
+<li>计算key的hash值，然后进行二次hash，根据二次hash结果找到对应的索引位置</li>
+<li>如果这个位置有值，先进性equals比较，若结果为true则取代该元素，若结果为false，就使用高低位平移法将节点插入链表（JDK8以前使用头插法，但是头插法在并发扩容时可能会造成环形链表或数据丢失，而高低位平移发会发生数据覆盖的情况）</li>
+</ol>
+<h2 id="6-线程安全的HashMap"><a href="#6-线程安全的HashMap" class="headerlink" title="6.线程安全的HashMap"></a>6.线程安全的HashMap</h2><ol>
+<li>使用ConcurrentHashMap</li>
+<li>使用HashTable</li>
+<li>Collections.synchronizedHashMap()方法</li>
+</ol>
+<h2 id="7-ConcurrentHashMap保证的线程安全"><a href="#7-ConcurrentHashMap保证的线程安全" class="headerlink" title="7.ConcurrentHashMap保证的线程安全"></a>7.ConcurrentHashMap保证的线程安全</h2><p>JDK1.7:</p>
+<p>​	使用分段锁，将一个Map分为了16个段，每个段都是一个小的hashmap，每次操作只对其中一个段加锁</p>
+<p>JDK1.8:</p>
+<p>​	采用CAS+Synchronized保证线程安全，每次插入数据时判断在当前数组下标是否是第一次插入，是就通过CAS方式插入，然后判断f.hash是否&#x3D;-1，是的话就说明其他线程正在进行扩容，当前线程也会参与扩容；删除方法用了synchronized修饰，保证并发下移除元素安全</p>
+<h2 id="8-HashTable与HashMap"><a href="#8-HashTable与HashMap" class="headerlink" title="8.HashTable与HashMap"></a>8.HashTable与HashMap</h2><ol>
+<li><p>HashTable的每个方法都用synchronized修饰，因此是线程安全的，但同时读写效率很低</p>
+</li>
+<li><p>HashTable的Key不允许为null</p>
+</li>
+<li><p>HashTable只对key进行一次hash，HashMap进行了两次Hash</p>
+</li>
+<li><p>HashTable底层使用的数组加链表</p>
+</li>
+</ol>
+<h2 id="9-ArrayList和LinkedList"><a href="#9-ArrayList和LinkedList" class="headerlink" title="9.ArrayList和LinkedList"></a>9.ArrayList和LinkedList</h2><p>​	ArratList的底层使用动态数组，默认容量为10，当元素数量到达容量时，生成一个新的数组，大小为前一次的1.5倍，然后将原来的数组copy过来；因为数组在内存中是连续的地址，所以ArrayList查找数据更快，由于扩容机制添加数据效率更低</p>
+<p>​	LinkedList的底层使用链表，在内存中是离散的，没有扩容机制；LinkedList在查找数据时需要从头遍历，所以查找慢，但是添加数据效率更高</p>
+<h2 id="10-保证ArrayList的线程安全"><a href="#10-保证ArrayList的线程安全" class="headerlink" title="10.保证ArrayList的线程安全"></a>10.保证ArrayList的线程安全</h2><ol>
+<li><p>使用collentions.synchronizedList方法为ArrayList加锁</p>
+</li>
+<li><p>使用Vector，Vector底层与Arraylist相同，但是每个方法都由synchronized修饰，速度很慢</p>
+</li>
+<li><p>使用juc下的CopyOnWriterArrayList，该类实现了读操作不加锁，写操作时为list创建一个副本，期间其它线程读取的都是原本list，写操作都在副本中进行，写入完成后，再将指针指向副本。</p>
+</li>
+</ol>
+<h2 id="11-String、StringBuffer、StringBuilder"><a href="#11-String、StringBuffer、StringBuilder" class="headerlink" title="11.String、StringBuffer、StringBuilder"></a>11.String、StringBuffer、StringBuilder</h2><p>String 由 char[] 数组构成，使用了 final 修饰，对 String 进行改变时每次都会新生成一个 String 对象，然后把指针指向新的引用对象。</p>
+<p>StringBuffer可变并且线程安全</p>
+<p>StringBuiler可变但线程不安全。</p>
+<h2 id="12-hashCode和equals"><a href="#12-hashCode和equals" class="headerlink" title="12.hashCode和equals"></a>12.hashCode和equals</h2><p>两者都是Object类的方法</p>
+<p>hashCode默认是通过地址来计算hash码，但是可能被重写过用内容来计算hash码</p>
+<p>equals默认通过地址判断两个对象是否相等，但是可能被重写用内容来比较两个对象</p>
+<p>所以两个对象相等，他们的hashCode和equals一定相等，但是hashCode相等的两个对象未必相等</p>
+<p>如果重写equals必须重写hashCode，比如在HashMap中，key如果是String类型，String如果只重写了equals而没有重写hashcode的话，则两个equals比较为true的key，因为hashcode不同导致两个key没有出现在一个索引上，就会出现map中存在两个相同的key</p>
+<h2 id="13-面向对象和面向过程"><a href="#13-面向对象和面向过程" class="headerlink" title="13.面向对象和面向过程"></a>13.面向对象和面向过程</h2><p>​	面向对象有封装、继承、多态性的特性，所以相比面向过程易维护、易复用、易扩展，但是因为类调用时要实例化，所以开销大性能比面向过程低。</p>
+<h2 id="14-深拷贝和浅拷贝"><a href="#14-深拷贝和浅拷贝" class="headerlink" title="14.深拷贝和浅拷贝"></a>14.深拷贝和浅拷贝</h2><p>浅拷贝:浅拷贝只复制某个对象的引用，而不复制对象本身，新旧对象还是共享同一块内存<br>深拷贝:深拷贝会创造一个一摸一样的对象，新对象和原对象不共享内存，修改新对象不会改变原对对象</p>
+<h2 id="15-多态"><a href="#15-多态" class="headerlink" title="15.多态"></a>15.多态</h2><p>​	多态的实现要有继承、重写，父类引用指向子类对象。它的好处是可以消除类型之间的耦合关系，增加类的可扩充性和灵活性。</p>
+<h2 id="16-反射"><a href="#16-反射" class="headerlink" title="16.反射"></a>16.反射</h2><p>反射是通过获取类的class对象，然后动态的获取到这个类的内部结构，动态的去操作类的属性和方法。<br>应用场景有：</p>
+<ul>
+<li>要操作权限不够的类属性和方法时</li>
+<li>实现自定义注解时</li>
+<li>动态加载第三方jar包时</li>
+<li>按需加载类</li>
+<li>节省编译和初始化时间</li>
+</ul>
+<p>获取class对象的方法有：</p>
+<ul>
+<li>class.forName(类路径)</li>
+<li>类.class()</li>
+<li>对象的getClass()</li>
+</ul>
+<h2 id="17-Java创建对象得五种方式"><a href="#17-Java创建对象得五种方式" class="headerlink" title="17.Java创建对象得五种方式"></a>17.Java创建对象得五种方式</h2><ul>
+<li>new关键字</li>
+<li>Class.newInstance</li>
+<li>Constructor.newInstance</li>
+<li>Clone方法</li>
+<li>反序列化</li>
+</ul>
+
+    </div>
+     
+    <div class="post-footer__meta"><p>updated at 2023-01-10</p></div> 
+    <div class="post-entry__tags"></div> 
+</article>
+
+
+    <div class="nav">
+        <div class="nav__prev">
+            
+        </div>
+        <div class="nav__next">
+            
+                <a href="/2023/01/09/hello-world/" class="nav__link">
+                    <div>
+                        <div class="nav__label">
+                            Next Post
+                        </div>
+                        <div class="nav__title">
+                            Hello World
+                        </div>
+                    </div>
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M434.944 790.624l-45.248-45.248L623.04 512l-233.376-233.376 45.248-45.248L713.568 512z" fill="#808080"></path></svg>
+                    </div>
+                </a>
+            
+        </div>
+    </div>
+
+
+
+
+
+</main>
+
+            <footer class="footer">
+    
+    
+
+
+    
+     
+ 
+
+ 
+    
+        
+        <p class="footer-copyright">
+            Copyright © 2023 <a href="/">Andy&#39;s blog</a>
+        </p>
+    
+    
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
+</footer>
+
+        </div>
+         
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+ 
+
+
+
+ 
+
+
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+
+    </body>
+</html>
